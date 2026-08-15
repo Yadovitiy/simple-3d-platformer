@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://c5oqcfvle71ww"]
 
 [ext_resource type="Script" uid="uid://csedpu5b30m3f" path="res://Scenes/Player/player_controller.gd" id="1_a3d8c"]
-[ext_resource type="ArrayMesh" uid="uid://doksc4gfjjyn3" path="res://Assets/Models/Characters/character-male-b.obj" id="1_uvnfx"]
+[ext_resource type="ArrayMesh" uid="uid://dnmlgtdi77t3e" path="res://Assets/Models/Characters/character-male-e.obj" id="2_xpcdj"]
+[ext_resource type="Script" uid="uid://crtlifg5jbpje" path="res://Scenes/Player/player_visual.gd" id="3_xpcdj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbnl5"]
 radius = 0.1850586
@@ -15,8 +16,9 @@ script = ExtResource("1_a3d8c")
 transform = Transform3D(-0.9999985, -0.0017453778, 7.2345856e-08, -0.0014427715, 0.82664627, 0.56272006, -0.0009822189, 0.5627192, -0.8266475, -0.011884842, 2.1048963, -1.3493948)
 fov = 70.0
 
-[node name="CharacterMaleB" type="MeshInstance3D" parent="." unique_id=297630513]
-mesh = ExtResource("1_uvnfx")
+[node name="model" type="MeshInstance3D" parent="." unique_id=297630513]
+mesh = ExtResource("2_xpcdj")
+script = ExtResource("3_xpcdj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=430334274]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004149914, 0.33789057, 0)
