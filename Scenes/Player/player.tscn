@@ -8,12 +8,12 @@
 radius = 0.1850586
 height = 0.66015625
 
-[node name="Player" type="CharacterBody3D" unique_id=142587827]
+[node name="Player" type="CharacterBody3D" unique_id=142587827 groups=["Player"]]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_a3d8c")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=211703506]
-transform = Transform3D(-0.9999985, -0.0017453778, 7.2345856e-08, -0.0014427715, 0.82664627, 0.56272006, -0.0009822189, 0.5627192, -0.8266475, -0.011884842, 2.1048963, -1.3493948)
+transform = Transform3D(-0.9999985, -0.0017453778, 7.2345856e-08, -0.0014427715, 0.82664627, 0.56272006, -0.0009822189, 0.5627192, -0.8266475, -0.011884815, 1.852699, -1.6619177)
 fov = 70.0
 
 [node name="model" type="MeshInstance3D" parent="." unique_id=297630513]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://djkji7fry2jje"]
+
+[ext_resource type="Script" uid="uid://dfd2ubyjghltg" path="res://Scenes/Enemy/enemy.gd" id="1_nvvbs"]
+[ext_resource type="ArrayMesh" uid="uid://brxvlpw18l3il" path="res://Assets/Models/Platformer/saw.obj" id="2_2t2r4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbnl5"]
+size = Vector3(0.5751953, 0.59350586, 0.20617676)
+
+[node name="Enemy" type="Area3D" unique_id=1033534511]
+script = ExtResource("1_nvvbs")
+move_speed = 1.5
+move_direction = Vector3(0, 2, 0)
+spin_speed = 720.0
+metadata/_edit_group_ = true
+
+[node name="Model" type="MeshInstance3D" parent="." unique_id=1040561847]
+mesh = ExtResource("2_2t2r4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=240371652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0016951561)
+shape = SubResource("BoxShape3D_kbnl5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
