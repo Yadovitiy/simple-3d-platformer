@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c5oqcfvle71ww"]
+
+[ext_resource type="ArrayMesh" uid="uid://doksc4gfjjyn3" path="res://Assets/Models/Characters/character-male-b.obj" id="1_uvnfx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbnl5"]
+radius = 0.1850586
+height = 0.66015625
+
+[node name="Player" type="CharacterBody3D" unique_id=142587827]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=211703506]
+transform = Transform3D(-0.9999985, -0.0017453616, 8.08844e-08, -0.0016147948, 0.92520833, 0.37945616, -0.0006623631, 0.3794556, -0.9252097, -0.011884809, 1.5146863, -1.7381659)
+fov = 70.0
+
+[node name="CharacterMaleB" type="MeshInstance3D" parent="." unique_id=297630513]
+mesh = ExtResource("1_uvnfx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=430334274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004149914, 0.33789057, 0)
+shape = SubResource("CapsuleShape3D_kbnl5")
