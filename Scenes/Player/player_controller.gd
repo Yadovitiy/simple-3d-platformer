@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-
+@export var health: int = 3
 @export var move_speed: float = 3.0
 @export var jump_force: float = 8.0
 @export var gravity: float = 20.0
@@ -8,6 +8,11 @@ extends CharacterBody3D
 @onready var camera_3d: Camera3D = $Camera3D
 
 
+func _process(delta: float) -> void:
+	if global_position.y < -5:
+		call_deferred("_game_over")
+		
+		
 func _physics_process(delta: float) -> void:
 	pass
 	# Apply gravity
@@ -23,5 +28,16 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.x = move_dir.x * move_speed
 	velocity.z = move_dir.z * move_speed
-	
+
 	move_and_slide()
+	
+	
+func take_damage(amount: int):
+	health -= amount
+	if health <= 0:
+		call_deferred("_game_over")
+		
+
+func  _game_over():
+	get_tree().reload_current_scene()
+		
