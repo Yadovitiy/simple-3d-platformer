@@ -17,16 +17,15 @@ sky_material = SubResource("ProceduralSkyMaterial_nh5l6")
 background_mode = 2
 sky = SubResource("Sky_hf2d5")
 ambient_light_source = 2
-ambient_light_color = Color(0.4906348, 0.24360794, 0.54958117, 1)
+ambient_light_color = Color(0.21409711, 0.11357198, 0.6311278, 1)
 fog_enabled = true
-fog_light_color = Color(0.6631822, 0.4775619, 0.6509655, 1)
+fog_light_color = Color(1.4198572e-06, 0.40137732, 0.34949782, 1)
 fog_light_energy = 1.2
-fog_density = 0.06
+fog_density = 0.25
 fog_height = 2.0
 fog_height_density = 0.4
 adjustment_enabled = true
-adjustment_contrast = 1.2
-adjustment_saturation = 1.2
+adjustment_saturation = 1.5
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nh5l6"]
 points = PackedVector3Array(-0.9604686, 0, -0.712585, 1.022246, 0.37556842, 0.79854685, 0.92504716, 0.34350848, -0.9568746, -0.9768895, 0.5, 0.7563571, 0.8055162, 0, 0.929408, -0.7561676, 0.5, -0.97688717, -0.86729723, -2.7755576e-17, 0.89854425, 0.8674363, -2.7755576e-17, -0.89854425, 0.7563099, 0.5, 0.97688717, 0.9768344, 0.5, -0.7563571, -0.7985215, 0.37556326, 1.0222589, -0.7123999, 0, -0.9604659, -1.0220782, 0.40755552, -0.7665578, 0.9604135, 2.7755576e-17, -0.712585, 0.733024, 0.43908638, -1.0200285, -1.022261, 0.3755634, 0.79851556, 0.9604135, 0, 0.712585, 0.7984792, 0.37556532, 1.0222753, -0.7123999, 0, 0.9604659, -0.79852134, 0.37556323, -1.0222588, -0.9604686, 2.7755576e-17, 0.712585, 0.71253896, 0, -0.9604659, 1.022246, 0.37556842, -0.79854685, 0.9768344, 0.5, 0.7563571, -0.7561676, 0.5, 0.97688717, -0.9768895, 0.5, -0.7563571, 0.7563099, 0.5, -0.97688717, -0.9568596, 0.34350672, -0.9250816, 0.71253896, 0, 0.9604659, 0.95684505, 0.34351078, 0.9251208, 0.7984794, 0.37556535, -1.0222754, -0.86729723, -2.7755576e-17, -0.89854425)
@@ -68,7 +67,7 @@ mesh = ExtResource("1_r6r24")
 shape = SubResource("ConvexPolygonShape3D_nh5l6")
 
 [node name="BlockGrassCornerOverhang" type="MeshInstance3D" parent="Platforms" unique_id=2081257673]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.615455, -0.6063099, -7.314554)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38925195, -0.6063099, -6.831421)
 mesh = ExtResource("2_x1qot")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Platforms/BlockGrassCornerOverhang" unique_id=660608705]
@@ -77,7 +76,7 @@ mesh = ExtResource("2_x1qot")
 shape = SubResource("ConvexPolygonShape3D_umxu5")
 
 [node name="BlockGrassLowLong" type="MeshInstance3D" parent="Platforms" unique_id=1018937575]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5679255, 0, -3.494926)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0847921, 0, -3.1065245)
 mesh = ExtResource("3_a14g6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Platforms/BlockGrassLowLong" unique_id=568579521]
@@ -86,7 +85,7 @@ mesh = ExtResource("3_a14g6")
 shape = SubResource("ConvexPolygonShape3D_japf7")
 
 [node name="BlockGrass" type="MeshInstance3D" parent="Platforms" unique_id=1928906069]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45083463, -0.9783689, -6.740171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0476469, -0.9783689, -5.101306)
 mesh = ExtResource("4_hf2d5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Platforms/BlockGrass" unique_id=868065874]
@@ -95,8 +94,9 @@ mesh = ExtResource("4_hf2d5")
 shape = SubResource("ConvexPolygonShape3D_tpgmc")
 
 [node name="BlockGrassOverhangLargeSlope" type="MeshInstance3D" parent="Platforms" unique_id=2080606880]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.5960293, 0, -5.8666306)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.2087812, 0, -5.345604)
 mesh = ExtResource("5_hf2d5")
+metadata/_edit_group_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Platforms/BlockGrassOverhangLargeSlope" unique_id=1914400090]
 
@@ -104,7 +104,7 @@ mesh = ExtResource("5_hf2d5")
 shape = SubResource("ConvexPolygonShape3D_oub4m")
 
 [node name="BlockGrassOverhangHexagon" type="MeshInstance3D" parent="Platforms" unique_id=931308957]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.995291, 0.8242798, -1.4237905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1953835, 0.8242798, -2.3805842)
 mesh = ExtResource("6_nh5l6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Platforms/BlockGrassOverhangHexagon" unique_id=173490201]
