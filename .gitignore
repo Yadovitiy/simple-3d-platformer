@@ -1,0 +1,16 @@
+# Godot 4+
+.godot/
+.import/
+export_presets.cfg
+
+# IDE
+.vscode/
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Compiled
+*.class
+*.jar
