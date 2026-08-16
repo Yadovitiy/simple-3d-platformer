@@ -7,6 +7,8 @@
 [ext_resource type="ArrayMesh" uid="uid://bqkqradtfopqt" path="res://Assets/Models/Platformer/block-grass-overhang-hexagon.obj" id="6_nh5l6"]
 [ext_resource type="PackedScene" uid="uid://c5oqcfvle71ww" path="res://Scenes/Player/player.tscn" id="7_nh5l6"]
 [ext_resource type="PackedScene" uid="uid://djkji7fry2jje" path="res://Scenes/Enemy/enemy.tscn" id="7_umxu5"]
+[ext_resource type="PackedScene" uid="uid://bisuhk1imx8gr" path="res://Scenes/Coin/coin.tscn" id="9_japf7"]
+[ext_resource type="ArrayMesh" uid="uid://d06vmfyi7p8vp" path="res://Assets/Models/Platformer/tree.obj" id="10_tpgmc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nh5l6"]
 
@@ -124,7 +126,7 @@ transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0
 [node name="Enemies" type="Node" parent="." unique_id=1820394400]
 
 [node name="Enemy" parent="Enemies" unique_id=1033534511 instance=ExtResource("7_umxu5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9336186, -0.64619255)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9336186, -1.3967113)
 
 [node name="Enemy2" parent="Enemies" unique_id=1801579347 instance=ExtResource("7_umxu5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042330742, 0.59602714, -4.0583687)
@@ -133,3 +135,18 @@ move_direction = Vector3(-3, 0, 0)
 [node name="Enemy3" parent="Enemies" unique_id=1902802308 instance=ExtResource("7_umxu5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.325756, 0.31685233, -4.377847)
 move_direction = Vector3(3, 0, 0)
+
+[node name="Tree" type="MeshInstance3D" parent="." unique_id=1417766315]
+transform = Transform3D(3.71, 0, 0, 0, 3.71, 0, 0, 0, 3.71, -5.7943273, -12.177547, -5.6974826)
+mesh = ExtResource("10_tpgmc")
+
+[node name="Coins" type="Node" parent="." unique_id=2091086254]
+
+[node name="Coin" parent="Coins" unique_id=1368121816 instance=ExtResource("9_japf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0743916, 0.6417694, -3.1407645)
+
+[node name="Coin2" parent="Coins" unique_id=2009110789 instance=ExtResource("9_japf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04446411, 0.6417694, -7.748678)
+
+[node name="Coin3" parent="Coins" unique_id=14850501 instance=ExtResource("9_japf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0151434, 1.3453622, -7.6990066)
