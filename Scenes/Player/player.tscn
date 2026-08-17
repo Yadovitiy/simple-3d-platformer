@@ -3,10 +3,17 @@
 [ext_resource type="Script" uid="uid://csedpu5b30m3f" path="res://Scenes/Player/player_controller.gd" id="1_a3d8c"]
 [ext_resource type="ArrayMesh" uid="uid://dnmlgtdi77t3e" path="res://Assets/Models/Characters/character-male-e.obj" id="2_xpcdj"]
 [ext_resource type="Script" uid="uid://crtlifg5jbpje" path="res://Scenes/Player/player_visual.gd" id="3_xpcdj"]
+[ext_resource type="Script" uid="uid://8jikkn1bjdy6" path="res://Scenes/playerui.gd" id="4_htcer"]
+[ext_resource type="Texture2D" uid="uid://bjjsjlx2wd46f" path="res://Assets/Sprites/hud_heartFull.png" id="4_mtuoh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbnl5"]
 radius = 0.1850586
 height = 0.66015625
+
+[sub_resource type="LabelSettings" id="LabelSettings_kbnl5"]
+font_size = 28
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.4745098)
 
 [node name="Player" type="CharacterBody3D" unique_id=142587827 groups=["Player"]]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
@@ -23,3 +30,36 @@ script = ExtResource("3_xpcdj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=430334274]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004149914, 0.33789057, 0)
 shape = SubResource("CapsuleShape3D_kbnl5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1505373566]
+script = ExtResource("4_htcer")
+
+[node name="HeartContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=561725078]
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.008
+anchor_right = 0.093
+anchor_bottom = 0.05
+offset_left = -0.52000046
+offset_top = 0.35999966
+offset_right = -0.55999756
+
+[node name="Heart" type="TextureRect" parent="CanvasLayer/HeartContainer" unique_id=705888607]
+layout_mode = 2
+texture = ExtResource("4_mtuoh")
+
+[node name="Heart2" type="TextureRect" parent="CanvasLayer/HeartContainer" unique_id=2037899714]
+layout_mode = 2
+texture = ExtResource("4_mtuoh")
+
+[node name="Heart3" type="TextureRect" parent="CanvasLayer/HeartContainer" unique_id=220250876]
+layout_mode = 2
+texture = ExtResource("4_mtuoh")
+
+[node name="Label" type="Label" parent="." unique_id=276410540]
+offset_left = 18.0
+offset_top = 59.0
+offset_right = 101.0
+offset_bottom = 82.0
+text = "ОЧКИ: 500"
+label_settings = SubResource("LabelSettings_kbnl5")
