@@ -39,5 +39,12 @@ func take_damage(amount: int):
 		
 
 func  _game_over():
+	PlayerStats.score = 0
 	get_tree().reload_current_scene()
+	
+	
+func increase_score(amount: int):
+	PlayerStats.score += amount
+	print(PlayerStats.score)
+	
 		
