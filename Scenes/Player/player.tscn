@@ -56,7 +56,7 @@ texture = ExtResource("4_mtuoh")
 layout_mode = 2
 texture = ExtResource("4_mtuoh")
 
-[node name="Label" type="Label" parent="." unique_id=276410540]
+[node name="ScoreText" type="Label" parent="." unique_id=276410540]
 offset_left = 18.0
 offset_top = 59.0
 offset_right = 101.0
