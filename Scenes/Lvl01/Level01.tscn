@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c5oqcfvle71ww" path="res://Scenes/Player/player.tscn" id="7_nh5l6"]
 [ext_resource type="PackedScene" uid="uid://djkji7fry2jje" path="res://Scenes/Enemy/enemy.tscn" id="7_umxu5"]
 [ext_resource type="PackedScene" uid="uid://bisuhk1imx8gr" path="res://Scenes/Coin/coin.tscn" id="9_japf7"]
+[ext_resource type="PackedScene" uid="uid://boury72cddosc" path="res://Scenes/EndFlag/end_flag.tscn" id="10_oub4m"]
 [ext_resource type="ArrayMesh" uid="uid://d06vmfyi7p8vp" path="res://Assets/Models/Platformer/tree.obj" id="10_tpgmc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nh5l6"]
@@ -120,13 +121,35 @@ metadata/_edit_group_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49491882, 0)
 shape = SubResource("BoxShape3D_tpgmc")
 
+[node name="BlockGrassOverhangHexagon2" type="MeshInstance3D" parent="Platforms" unique_id=1118707861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.415595, 0.53739595, -8.080591)
+mesh = ExtResource("6_nh5l6")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platforms/BlockGrassOverhangHexagon2" unique_id=36953225]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platforms/BlockGrassOverhangHexagon2/StaticBody3D" unique_id=379729924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49491882, 0)
+shape = SubResource("BoxShape3D_tpgmc")
+
+[node name="BlockGrassOverhangHexagon3" type="MeshInstance3D" parent="Platforms" unique_id=2122441274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.461887, 0.53739595, -8.696016)
+mesh = ExtResource("6_nh5l6")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platforms/BlockGrassOverhangHexagon3" unique_id=2125769160]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platforms/BlockGrassOverhangHexagon3/StaticBody3D" unique_id=1329125407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49491882, 0)
+shape = SubResource("BoxShape3D_tpgmc")
+
 [node name="Player" parent="." unique_id=142587827 instance=ExtResource("7_nh5l6")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.5134292, 0)
 
 [node name="Enemies" type="Node" parent="." unique_id=1820394400]
 
 [node name="Enemy" parent="Enemies" unique_id=1033534511 instance=ExtResource("7_umxu5")]
-transform = Transform3D(3.2156, 0, 0, 0, 3.2156, 0, 0, 0, 3.2156, 0, 0.10172647, -1.7409999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9336186, -1.3665311)
 move_speed = 0.75
 
 [node name="Enemy2" parent="Enemies" unique_id=1801579347 instance=ExtResource("7_umxu5")]
@@ -155,3 +178,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04446411, 0.6417694, -7.748
 
 [node name="Coin3" parent="Coins" unique_id=14850501 instance=ExtResource("9_japf7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0151434, 1.3453622, -7.6990066)
+
+[node name="EndFlag" parent="." unique_id=694373054 instance=ExtResource("10_oub4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.516371, 1.5002323, -8.63605)
+scene_to_load = ExtResource("7_nh5l6")
