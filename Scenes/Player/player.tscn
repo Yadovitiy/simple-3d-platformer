@@ -63,3 +63,5 @@ offset_right = 101.0
 offset_bottom = 82.0
 text = "ОЧКИ: 500"
 label_settings = SubResource("LabelSettings_kbnl5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1818972258]
